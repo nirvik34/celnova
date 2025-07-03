@@ -1,4 +1,5 @@
 tensorflow
+seaborn
 opencv-python
 numpy
 pandas
