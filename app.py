@@ -55,8 +55,8 @@ st.markdown('''
 # Load label encoder classes
 LABELS = ['akiec', 'bcc', 'bkl', 'df', 'mel', 'nv', 'vasc']  # Update if your classes differ
 
-# Load the trained model (choose transfer_model.keras for best accuracy)
-MODEL_PATH = os.path.join('model', 'transfer_model.keras')
+# Load the trained model (now using the new Keras 3.x compatible file)
+MODEL_PATH = os.path.join('model', 'model_keras3.keras')
 try:
     model = load_model(MODEL_PATH)
 except Exception as e:
