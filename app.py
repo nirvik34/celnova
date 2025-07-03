@@ -57,7 +57,11 @@ LABELS = ['akiec', 'bcc', 'bkl', 'df', 'mel', 'nv', 'vasc']  # Update if your cl
 
 # Load the trained model (choose transfer_model.keras for best accuracy)
 MODEL_PATH = os.path.join('model', 'transfer_model.keras')
-model = load_model(MODEL_PATH)
+try:
+    model = load_model(MODEL_PATH)
+except Exception as e:
+    st.error(f"Failed to load model: {e}")
+    st.stop()
 
 # Mapping from short code to full name and description
 CLASS_INFO = {
